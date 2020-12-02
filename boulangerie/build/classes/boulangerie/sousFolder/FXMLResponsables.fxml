@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="principalResponsables" onMouseDragged="#OnMouseDragged" onMousePressed="#OnMousePressed" prefHeight="700.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boulangerie.sousFolder.FXMLResponsablesController">
+    <stylesheets>
+        <URL value="@fxmlprincipal.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="174.0" layoutY="170.0" text="Responsable " AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="13.0">
+         <image>
+            <Image url="@../../images/115-users.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="31.0" layoutY="60.0" mnemonicParsing="false" onAction="#onMouseClickBack" text="&lt;" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="52.0" />
+      <Label layoutX="52.0" layoutY="114.0" text="Numero" textAlignment="JUSTIFY">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="numero" layoutX="140.0" layoutY="114.0" text="1" textAlignment="JUSTIFY">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nom" layoutX="53.0" layoutY="198.0" prefHeight="26.0" prefWidth="185.0" />
+      <Label layoutX="52.0" layoutY="168.0" text="Nom" textAlignment="JUSTIFY">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="pseudo" layoutX="54.0" layoutY="262.0" prefHeight="26.0" prefWidth="185.0" />
+      <Label layoutX="52.0" layoutY="232.0" text="Pseudo" textAlignment="JUSTIFY">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="295.0" text="Mots de passe" textAlignment="JUSTIFY">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="contact" layoutX="54.0" layoutY="398.0" prefHeight="26.0" prefWidth="185.0" />
+      <Label layoutX="54.0" layoutY="365.0" text="Contact" textAlignment="JUSTIFY">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="droit" layoutX="59.0" layoutY="463.0" prefHeight="26.0" prefWidth="185.0" />
+      <Label layoutX="58.0" layoutY="432.0" text="Droit" textAlignment="JUSTIFY">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="19.0" />
+         </font>
+      </Label>
+      <Button layoutX="59.0" layoutY="525.0" mnemonicParsing="false" onAction="#enregistrer" style="-fx-background-color: #202020;" text="Enregistrer" textFill="WHITE" />
+      <Button layoutX="384.0" layoutY="525.0" mnemonicParsing="false" onAction="#modifier" prefHeight="26.0" prefWidth="92.0" style="-fx-background-color: #202020;" text="Modifier" textFill="WHITE" />
+      <Button layoutX="499.0" layoutY="525.0" mnemonicParsing="false" onAction="#supprimer" style="-fx-background-color: #202020;" text="Supprimer" textFill="WHITE" />
+      <TableView fx:id="table" layoutX="334.0" layoutY="129.0" prefHeight="371.0" prefWidth="621.0">
+         <columns>
+            <TableColumn prefWidth="82.0" text="Numero" />
+            <TableColumn prefWidth="95.0" text="Nom" />
+            <TableColumn prefWidth="90.0" text="Pseudo" />
+            <TableColumn prefWidth="126.0" text="Mots de passe" />
+            <TableColumn prefWidth="93.0" text="Contact" />
+            <TableColumn minWidth="0.0" prefWidth="132.0" text="Droit" />
+         </columns>
+      </TableView>
+      <PasswordField fx:id="pass" layoutX="55.0" layoutY="337.0" prefHeight="26.0" prefWidth="185.0" />
+      <Button layoutX="157.0" layoutY="524.0" mnemonicParsing="false" onAction="#nouveau" style="-fx-background-color: #202020;" text="Nouveau" textFill="WHITE" />
+   </children>
+</AnchorPane>
